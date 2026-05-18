@@ -28,7 +28,7 @@ pip install numpy scipy matplotlib absl-py ml-collections tensorboard
 
 ### 1.2 数据集准备
 
-可以选择**（A）直接下载预处理好的数据**或**（B）自行生成数据**。
+可以选择 **（A）直接下载预处理好的数据** 或 **（B）自行生成数据**。
 
 #### 方式 A：下载预处理数据
 
@@ -83,7 +83,7 @@ DATA_NAME=double_pendulum bash scripts/data_gen_test.sh
 
 #### 步骤 1：训练模型
 
-编辑 [`scripts/train.sh`](scripts/train.sh)，取消注释你想要运行的实验名称，例如：
+编辑 [`scripts/train.sh`](scripts/train.sh)，取消注释想要运行的实验名称，例如：
 
 ```bash
 EXP_NAME=sinpend_kernel2_stride1  # 单摆，block_size=2, stride=1
