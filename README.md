@@ -174,14 +174,16 @@ bash scripts/generate_partial.sh
 
 以下列出所有可用的实验配置及其预期用途：
 
-| EXP_NAME | block_size | block_step | 适用场景 |
+| EXP_NAME | block_size | block_step | 物理场景 |
 |----------|------------|------------|----------|
-| `sinpend_kernel2_stride1` | 2 | 1 | 单摆，细粒度预测 |
-| `sinpend_kernel4_stride2` | 4 | 2 | 单摆，中等粒度 |
-| `sinpend_kernel8_stride4` | 8 | 4 | 单摆，粗粒度快速生成 |
-| `doupend_kernel2_stride1` | 2 | 1 | 双摆，细粒度预测 |
-| `doupend_kernel4_stride2` | 4 | 2 | 双摆，中等粒度 |
-| `doupend_kernel8_stride4` | 8 | 4 | 双摆，粗粒度快速生成 |
+| `sinpend_kernel2_stride1` | 2 | 1 | 单摆 |
+| `sinpend_kernel4_stride2` | 4 | 2 | 单摆 |
+| `sinpend_kernel8_stride4` | 8 | 4 | 单摆 |
+| `doupend_kernel2_stride1` | 2 | 1 | 双摆 |
+| `doupend_kernel4_stride2` | 4 | 2 | 双摆 |
+| `doupend_kernel8_stride4` | 8 | 4 | 双摆 |
+
+更大的块大小会增大训练难度，但可以让模型具有更大的时间感受野/上下文窗口，有利于降低长时程相位误差。
 
 ### 1.6 查看结果
 
