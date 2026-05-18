@@ -70,7 +70,7 @@ class BaseHamiltonianNet(nn.Module):
     ax.legend()
 
     fig.canvas.draw()
-    image = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+    image = np.frombuffer(fig.canvas.buffer_rgba(), dtype=np.uint8).reshape(fig.canvas.get_width_height()[::-1] + (4,))[:, :, :3].flatten()
     image = image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
     image_tensor = torch.tensor(image).permute(2, 0, 1)
 
